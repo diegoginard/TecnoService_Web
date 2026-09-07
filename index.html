@@ -21,10 +21,11 @@
       </a>
       <nav class="nav-links">
         <a href="#funciones">Funcionalidades</a>
+        <a href="#capturas">Capturas de Pantalla</a>
         <a href="#diferencias">Por qué elegirlo</a>
         <a href="#arquitectura">Requisitos</a>
         <!-- Reemplazá el número de teléfono con tu WhatsApp real -->
-        <a href="https://wa.me/3704348821?text=Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20TecnoService%20Core" class="btn-cta-nav" target="_blank">Consultar Demo</a>
+        <a href="https://wa.me/5493704348821?text=Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20TecnoService%20Core" class="btn-cta-nav" target="_blank">Consultar Demo</a>
       </nav>
     </div>
   </header>
@@ -39,15 +40,25 @@
           Administrá ingresos de equipos, diagnóstico de fallas, fotos de estado, repuestos asignados y cuentas corrientes con una herramienta sólida, rápida y 100% pensada para el banco de trabajo.
         </p>
         <div class="hero-buttons">
-          <a href="https://wa.me/3704348821?text=Hola!%20Quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20TecnoService" class="btn-primary" target="_blank">
+          <a href="https://wa.me/5493704348821?text=Hola!%20Quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20TecnoService" class="btn-primary" target="_blank">
             Solicitar Demostración
           </a>
-          <a href="#funciones" class="btn-secondary">Ver Características</a>
+          <a href="#capturas" class="btn-secondary">Ver 25 Capturas</a>
         </div>
       </div>
 
       <div class="hero-card-preview">
-        <img src="assets/imagenes/TecnoService_Logo.png" alt="TecnoService Logo Central" />
+        <a href="#capturas" class="hero-preview-link" title="Ir a la galería de capturas">
+          <img src="assets/imagenes/TecnoService_Logo.png" alt="TecnoService Logo Central" />
+          <div class="hero-preview-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>Ver 25 pantallas del sistema en acción ↓</span>
+          </div>
+        </a>
         <div class="hero-status-pill">
           <span class="pulse-dot"></span>
           <span>Disponible para Windows y Servidores Locales</span>
@@ -143,6 +154,92 @@
       </div>
     </section>
 
+    <!-- GALERÍA INTERACTIVA DE CAPTURAS -->
+    <section id="capturas" class="gallery-section">
+      <div class="section-title gallery-title">
+        <span class="badge">Interfaz Real del Software</span>
+        <h2>Conocé TecnoService Core por dentro</h2>
+        <p>Explorá en detalle las 25 pantallas del sistema: flujo de órdenes, evidencia de fallas, taller, inventario y facturación.</p>
+      </div>
+
+      <div class="slider-wrapper-card">
+        <!-- Barra de ventana superior estilo aplicación -->
+        <div class="slider-window-bar">
+          <div class="window-controls">
+            <span class="win-dot dot-red"></span>
+            <span class="win-dot dot-yellow"></span>
+            <span class="win-dot dot-green"></span>
+            <span class="window-app-name">TecnoService Core</span>
+          </div>
+
+          <div class="window-screen-info">
+            <span id="slideCurrentCategory" class="window-category-tag">Módulo</span>
+            <span class="window-info-sep">•</span>
+            <h3 id="slideCurrentTitle" class="window-screen-title">Cargando módulo...</h3>
+          </div>
+
+          <div class="slider-toolbar-actions">
+            <button id="autoplayToggle" class="toolbar-btn" type="button" title="Pausar/Reanudar reproducción automática">
+              <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+              <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                <polygon points="5,3 19,12 5,21"></polygon>
+              </svg>
+            </button>
+            <button id="fullscreenBtn" class="toolbar-btn" type="button" title="Ampliar en pantalla completa">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+            </button>
+            <div id="sliderCounter" class="slider-counter-badge">1 / 25</div>
+          </div>
+        </div>
+
+        <!-- Barra de progreso para el autoplay -->
+        <div class="slider-progress-track">
+          <div id="sliderProgressBar" class="slider-progress-fill"></div>
+        </div>
+
+        <!-- Visor principal con botones y diapositivas -->
+        <div class="slider-viewport-wrapper">
+          <button id="sliderPrev" class="slider-arrow slider-arrow-prev" type="button" aria-label="Captura anterior">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="slider-viewport">
+            <div id="sliderTrack" class="slider-track">
+              <!-- Slides inyectados con JavaScript -->
+            </div>
+          </div>
+
+          <button id="sliderNext" class="slider-arrow slider-arrow-next" type="button" aria-label="Captura siguiente">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Tira interactiva de miniaturas (Filmstrip) -->
+        <div class="thumb-strip-container">
+          <div class="thumb-strip-header">
+            <span>Navegá entre las 25 capturas (o usá las flechas ← → de tu teclado):</span>
+          </div>
+          <div class="thumb-strip-wrapper">
+            <div id="thumbTrack" class="thumb-track">
+              <!-- Miniaturas 1..25 generadas por JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SPECS Y MODELO DE INSTALACIÓN -->
     <section id="arquitectura" class="specs-wrapper">
       <div class="specs-section">
@@ -179,12 +276,12 @@
         Consultanos para coordinar una prueba, ver el sistema en acción o conocer los planes de licencia para tu negocio.
       </p>
       <!-- Reemplazá el número de teléfono con tu WhatsApp real -->
-      <a href="https://wa.me/3704348821?text=Hola!%20Quiero%20conocer%20los%20precios%20y%20planes%20de%20TecnoService%20Core" class="btn-primary cta-button" target="_blank">
+      <a href="https://wa.me/5493704348821?text=Hola!%20Quiero%20conocer%20los%20precios%20y%20planes%20de%20TecnoService%20Core" class="btn-primary cta-button" target="_blank">
         Hablar con Nosotros por WhatsApp
       </a>
     </section>
   </main>
-
+  
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
@@ -200,5 +297,46 @@
     </div>
   </footer>
 
+  <!-- MODAL LIGHTBOX / PANTALLA COMPLETA -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visor de capturas en alta resolución">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <div class="lightbox-header">
+        <div class="lightbox-info">
+          <span class="lightbox-category-badge">Módulo</span>
+          <h3 id="lightboxTitle">Título de la captura</h3>
+        </div>
+        <div class="lightbox-actions">
+          <span id="lightboxCounter" class="lightbox-counter">1 de 25</span>
+          <button id="lightboxClose" class="lightbox-close-btn" type="button" aria-label="Cerrar visor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <button id="lightboxPrev" class="lightbox-nav-btn lightbox-prev" type="button" aria-label="Anterior">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="lightbox-img-wrapper">
+          <img id="lightboxImg" src="" alt="Captura ampliada de TecnoService Core" />
+        </div>
+        <button id="lightboxNext" class="lightbox-nav-btn lightbox-next" type="button" aria-label="Siguiente">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="lightbox-footer">
+        <span class="lightbox-hint">Podés usar las flechas (← / →) para cambiar de captura o Escape para salir</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/slider.js"></script>
 </body>
 </html>
